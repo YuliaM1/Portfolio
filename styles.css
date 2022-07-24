@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --white-color: #FFFFFF;
+  --light-pink-color: #FFF5F5;
+  --pink-color: #FBB5C2;
+  --dark-pink-color: #FA7C94;
+  --text-color: #19181C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Segoe UI;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding: 0 40px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--light-pink-color);
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 0 3px 0 var(--pink-color);
+  z-index: 999;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar li {
+  padding: 10px 20px;
+}
+
+.navbar a, button, .project-tile, .links a {
+  transition: 0.3s ease-out;
+}
+
+.navbar a:hover {
+  color: var(--dark-pink-color);
+}
+
+.welcome {
+  height: 100vh;
+  background-color: var(--light-pink-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome .subtitle {
+  font-size: 1.5em;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.welcome .description {
+  color: var(--dark-pink-color);
+}
+
+.projects {
+  padding: 80px 120px;
+  background-color: var(--pink-color);
+}
+
+.projects-grid {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 40px;
+}
+
+.project-tile {
+  text-align: center;
+  background-color: var(--light-pink-color);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.project-tile:hover {
+  transform: scale(1.03);
+}
+
+.project-tile img {
+  width: 100%;
+  box-shadow: 0 0 5px -1px var(--pink-color);
+  border-radius: 5px;
+}
+
+.project-tile p {
+  padding-top: 20px;
+}
+
+.projects button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.6em 1.7em;
+  background-color: var(--light-pink-color);
+  font-size: 0.8em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.projects button:hover {
+  color: var(--dark-pink-color);
+}
+
+.contacts {
+  height: 90vh;
+  background-color: var(--light-pink-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts h2 {
+  font-size: 2.3em;
+  margin-bottom: 0.1em;
+}
+
+.links {
+  margin-top: 30px;
+  font-size: 1.3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.links a {
+  margin: 0.3em 0.7em;
+}
+
+.links a:hover {
+  color: var(--dark-pink-color);
+  transform: translateY(-10px);
+}
+
+footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 40px;
+  background-color: var(--pink-color);
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .welcome .subtitle {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-bottom: 1em;
+  }
+
+  .projects {
+    padding: 80px 60px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .contacts h2 {
+    font-size: 2em;
+    margin-bottom: 0.1em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .projects {
+    padding: 80px 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  }
+}
